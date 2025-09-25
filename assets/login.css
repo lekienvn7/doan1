@@ -11,12 +11,12 @@ header {
 }
 header .container {
   max-width: 1500px;
-  margin: 10px 20px;
+  margin: 0 20px;
   padding: 0 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 40px;
+  height: 60px;
 }
 
 .logo {
@@ -43,7 +43,7 @@ header div nav ul {
   display: flex;
   list-style: none;
   gap: 25px;
-  margin-left: 700px;
+  margin-left: 690px;
 }
 nav ul li a {
   text-decoration: none;
@@ -74,6 +74,7 @@ header nav ul li.dropdown {
 
   opacity: 0;
   pointer-events: none;
+  transform-origin: top;
   transition: transform 0.35s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.25s ease;
 }
 .drop-content {
@@ -130,22 +131,90 @@ li.dropdown:hover .dropbox {
   background-color: #a64dc7;
 }
 
-.hero {
+body {
+  background: linear-gradient(to right, #e3fdf5, #ffe6fa);
+}
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  align-items: center;
+  justify-content: center;
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 40px 50px;
+  gap: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.chaomung {
+  color: #cb6ce6;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.text-login {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 25px;
+}
+
+.label-email {
   position: relative;
   display: flex;
   flex-direction: column;
-  background: linear-gradient(to right, #e3fdf5, #ffe6fa);
-  align-items: flex-start;
-  justify-content: center;
-  text-align: left;
-  margin: 10px 0px;
-  padding: 20px;
-  height: 80vh;
-  width: 100vw;
+  width: 400px;
+  gap: 5px;
+  font-weight: bold;
 }
-.hero-icon {
+
+.label-email i {
   position: absolute;
-  width: 200px;
+  top: 55%;
+  left: 20px;
+  color: #cb6ce6;
+}
+
+.label-pass {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  gap: 5px;
+  font-weight: bold;
+}
+.label-pass i {
+  position: absolute;
+  top: 55%;
+  left: 20px;
+  color: #cb6ce6;
+}
+
+input {
+  height: 50px;
+  border-radius: 12px;
+  padding: 0 65px;
+  font-size: 15px;
+
+  transition: transform 0.3s ease, border 0.25s ease,
+    background-color 0.25s ease;
+}
+
+input:focus {
+  outline: none;
+  border: 2px solid #cb6ce6;
+  background-color: #fdf9ff;
+}
+
+.button-login2 {
+  width: 400px;
   height: 50px;
   background-color: #545454;
   color: white;
@@ -156,67 +225,40 @@ li.dropdown:hover .dropbox {
   font-weight: bold;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
   border-radius: 10px;
-  margin-left: 70px;
-  margin-top: -400px;
 
-  transform: rotate(-5deg);
+  transition: transform 0.3s ease, background-color 0.2s ease;
 }
-
-.hero-slogan ul {
-  list-style: none;
-  color: #cb6ce6;
-  font-size: 70px;
-  font-weight: bold;
+.button-login2:hover {
+  transform: scale(1.05);
+  background-color: #a64dc7;
 }
-
-.hero-slogan {
-  position: absolute;
-  max-width: 540px;
-  margin-top: -150px;
-  margin-left: 70px;
-}
-.hero-intro .highlight {
-  color: #cb6ce6;
-  font-weight: bold;
+.button-login2:active {
+  transform: scale(0.95);
+  background-color: #a64dc7;
 }
 
-.hero-intro {
-  font-size: 18px;
-  max-width: 540px;
-  position: absolute;
-  margin-top: 100px;
-  margin-left: 70px;
-}
+.pass-forgot {
+  width: 100%;
+  text-align: right;
+  margin-top: 5px;
 
-.icon-demo li {
-  list-style: none;
-  transition: transform 0.25s ease, color 0.2s ease;
+  transition: transform 0.3s ease;
 }
-.icon-demo li a {
+.pass-forgot a {
+  color: #0151b8;
   text-decoration: none;
-  color: #cb6ce6;
-  font-weight: lighter;
-  transform: scale(1);
-  transition: transform 0.25s ease, color 0.2s ease;
-}
-.icon-demo li:hover {
-  text-decoration: underline;
-  color: #a64dc7;
-  transform: scale(1.1);
-}
 
-.icon-demo {
-  position: absolute;
-  margin-top: 225px;
-  margin-left: 70px;
-  display: flex;
-  flex-direction: row;
-  gap: 36px;
+  transition: color 0.2s ease;
 }
-
-.hero-tag {
-  position: absolute;
-  margin-left: 70px;
-  margin-top: 450px;
-  opacity: 0.5;
+.pass-forgot:hover {
+  transform: scale(1.05);
+}
+.pass-forgot:active {
+  transform: scale(0.95);
+}
+.pass-forgot a:hover {
+  color: #0d99ff;
+}
+.pass-forgot a:active {
+  color: #0151b8;
 }
