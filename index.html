@@ -5,24 +5,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>COWLOGIN</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 </head>
 
 <body>
     <header>
         <div class="container">
-            <div class="logo">COWLOGIN</div>
+            <a href="/" class="logo">COWLOGIN</a>
             <nav>
                 <ul>
                     <li><a href="#">Giới thiệu</a></li>
                     <li><a href="#">Khoá học</a></li>
                     <li><a href="#">Đội ngũ giáo viên</a></li>
-                    <li><a href="#">Thư viện</a></li>
+                    <li class="dropdown">
+                        <a href="#">Thư viện</a>
+                        <div class="dropbox">
+                            <div class="drop-arrow"></div>
+                            <ul class="drop-content">
+                                <li><a href="#">Tài liệu</a></li>
+                                <li><a href="#">Sách</a></li>
+                                <li><a href="#">Dụng cụ học tập</a></li>
+                                <li><a href="#">Khách</a></li>
+                            </ul>
+                        </div>
+                    </li>
                 </ul>
             </nav>
-            <a href="#" class="button-login">Đăng nhập</a>
+            <button class="button-login">Đăng nhập</button>
         </div>
     </header>
+    <main>
+        <section class="icon">
+            <i class="fa-regular fa-address-book"></i>
+            <i class="fa-regular fa-bookmark"></i>
+            <i class="fa-regular fa-clipboard"></i>
+            <i class="fa-regular fa-pen-to-square"></i>
+            <i class="fa-regular fa-paste"></i>
+            <i class="fa-regular fa-hourglass-half"></i>
+            <i class="fa-regular fa-envelope-open"></i>
+            <i class="fa-regular fa-calendar"></i>
+        </section>
+    </main>
 </body>
 
 </html>
