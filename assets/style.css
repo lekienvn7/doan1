@@ -10,8 +10,8 @@ header {
   color: black;
 }
 header .container {
-  max-width: 1440px;
-  margin: 25px 150px;
+  max-width: 1500px;
+  margin: 10px 20px;
   padding: 0 20px;
   display: flex;
   align-items: center;
@@ -42,12 +42,12 @@ header .container {
 header div nav ul {
   display: flex;
   list-style: none;
-  gap: 26px;
-  margin-left: 400px;
+  gap: 25px;
+  margin-left: 690px;
 }
 nav ul li a {
   text-decoration: none;
-  color: black;
+  color: #737373;
   font-weight: 500;
   transition: color 0.2s ease;
 }
@@ -60,7 +60,7 @@ header nav ul li.dropdown {
 }
 .dropbox {
   position: absolute;
-  top: calc(100% + 7px);
+  top: calc(100% + 9px);
   left: 50%;
   transform: translateX(-50%) scale(0.8);
   transform-origin: top center;
@@ -70,6 +70,7 @@ header nav ul li.dropdown {
   min-width: 180px;
   min-height: 80px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  z-index: 10;
 
   opacity: 0;
   pointer-events: none;
@@ -97,9 +98,9 @@ header nav ul li.dropdown {
   transform: translateX(-50%);
   width: 0;
   height: 0;
-  border-left: 8px solid transparent;
-  border-right: 8px solid transparent;
-  border-bottom: 8px solid #333;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #333;
 }
 li.dropdown:hover .dropbox {
   opacity: 1;
@@ -113,6 +114,7 @@ li.dropdown:hover .dropbox {
   color: white;
   font-weight: bold;
   text-decoration: none;
+  margin-left: 40px;
   padding: 10px 20px;
   border: none;
   border-radius: 10px;
@@ -127,4 +129,196 @@ li.dropdown:hover .dropbox {
 .button-login:active {
   transform: scale(0.95);
   background-color: #a64dc7;
+}
+
+.hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(to right, #e3fdf5, #ffe6fa);
+  align-items: flex-start;
+  justify-content: center;
+  text-align: left;
+  margin: 10px 0px;
+  padding: 20px;
+  height: 80vh;
+  width: 100vw;
+}
+.hero-icon {
+  position: absolute;
+  width: 200px;
+  height: 50px;
+  background-color: #545454;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30.7px;
+  font-weight: bold;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  margin-left: 70px;
+  margin-top: -400px;
+
+  transform: rotate(-5deg);
+}
+
+.hero-slogan ul {
+  list-style: none;
+  color: #cb6ce6;
+  font-size: 70px;
+  font-weight: bold;
+}
+
+.hero-slogan {
+  position: absolute;
+  max-width: 540px;
+  margin-top: -150px;
+  margin-left: 70px;
+}
+.hero-intro .highlight {
+  color: #cb6ce6;
+  font-weight: bold;
+}
+
+.hero-intro {
+  font-size: 18px;
+  max-width: 540px;
+  position: absolute;
+  margin-top: 100px;
+  margin-left: 70px;
+}
+
+.icon-demo li {
+  list-style: none;
+  transition: transform 0.25s ease, color 0.2s ease;
+}
+.icon-demo li a {
+  text-decoration: none;
+  color: #cb6ce6;
+  font-weight: lighter;
+  transform: scale(1);
+  transition: transform 0.25s ease, color 0.2s ease;
+}
+.icon-demo li:hover {
+  text-decoration: underline;
+  color: #a64dc7;
+  transform: scale(1.1);
+}
+
+.icon-demo {
+  position: absolute;
+  margin-top: 225px;
+  margin-left: 70px;
+  display: flex;
+  flex-direction: row;
+  gap: 36px;
+}
+
+.hero-tag {
+  position: absolute;
+  margin-left: 70px;
+  margin-top: 450px;
+  opacity: 0.5;
+}
+
+/* === Mobile First / Media Queries === */
+
+/* Tablet: max-width 1024px */
+@media (max-width: 1024px) {
+  header .container {
+    margin: 10px 20px;
+    flex-wrap: wrap;
+    height: auto;
+  }
+
+  header nav ul {
+    margin-left: 0;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .button-login {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+
+  .hero {
+    margin: 10px;
+    padding: 15px;
+    height: auto;
+  }
+
+  .hero-icon {
+    margin-left: 0;
+    margin-top: -50px;
+    width: 150px;
+    height: 40px;
+    font-size: 24px;
+  }
+
+  .hero-slogan {
+    max-width: 100%;
+    margin-left: 0;
+    font-size: 50px;
+    text-align: center;
+  }
+
+  .hero-intro {
+    margin-left: 0;
+    margin-top: 20px;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .icon-demo {
+    margin-left: 0;
+    margin-top: 20px;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+
+  .hero-tag {
+    margin-left: 0;
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  /* Dropdown popup căn giữa chữ */
+  .dropbox {
+    left: 50%;
+    transform: translateX(-50%) scale(0.9);
+  }
+}
+
+/* Mobile: max-width 768px */
+@media (max-width: 768px) {
+  .hero-slogan ul li {
+    font-size: 40px;
+  }
+
+  .hero-icon {
+    width: 130px;
+    height: 35px;
+    font-size: 20px;
+    margin-top: -40px;
+  }
+}
+
+/* Small mobile: max-width 480px */
+@media (max-width: 480px) {
+  .hero-slogan ul li {
+    font-size: 30px;
+  }
+
+  .button-login {
+    width: 100%;
+  }
+
+  header nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
 }
