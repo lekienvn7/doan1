@@ -166,6 +166,9 @@ form {
   text-align: center;
   gap: 25px;
 }
+.text-login .text-notice {
+  font-weight: lighter;
+}
 
 .label-email {
   position: relative;
