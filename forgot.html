@@ -4,9 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/login.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <title>Đăng nhập - Cowlogin</title>
+    <link rel="stylesheet" href="./assets/forgot.css">
+    <title>Forgot Password</title>
 </head>
 <header>
     <div class="container">
@@ -54,33 +53,33 @@
         </nav>
         <button class="button-login" onclick="window.location.href='login.html'">Đăng nhập</button>
     </div>
+
+
 </header>
 
-<div class="login-container">
-    <div class="text-login">
-        <h2 class="chaomung">Chào mừng bạn trở lại</h2>
-        <h1>Đăng Nhập</h1>
-        <p>Bắt đầu trải nghiệm học tập và kết nối với mọi người.</p>
-    </div>
-    <form>
-        <div class="label-email">
-            <label for="email">Email</label>
-            <i class="fa-regular fa-envelope"></i>
-            <input type="email" id="email" placeholder="Nhập email đã đăng ký" required>
-        </div>
-        <div class="label-pass">
-            <i class="fa-solid fa-lock"></i>
-            <Label for="password">Mật Khẩu</Label>
-            <input type="password" id="password" placeholder="Nhập mật khẩu">
-        </div>
-        <button class="button-login2" onclick="window.location.href='./'">COWLOGIN</button>
-    </form>
-    <div class="pass-forgot"><a href="./forgot.html">Quên mật khẩu?</a></div>
-
-</div>
-
 <body>
+    <div class="login-container">
+        <div class="text-login">
+            <h2 class="chaomung">Bạn quên mật khẩu?</h2>
+            <h1>Nhập Email</h1>
+            <p>Chúng tôi có thể gửi hướng dẫn đặt lại mật khẩu đến email liên kết với tài khoản Font Awesome của bạn.
+            </p>
+        </div>
+        <form>
+            <div class="label-email">
+                <label for="email">Email</label>
+                <i class="fa-regular fa-envelope"></i>
+                <input type="email" id="email" placeholder="Nhập email đã đăng ký" required>
+            </div>
+            <div class="complete"><button class="button-login2" id="btn-login">COWLOGIN</button>
+                <div class="complete-text">
+                    <a href="./login.html">Chúng tôi đã gửi tin nhắn đến email của bạn.</a>
+                </div>
+            </div>
+        </form>
 
+    </div>
+    <script src="./script/forgot.js"></script>
 </body>
 
 </html>
