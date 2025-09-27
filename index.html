@@ -16,7 +16,7 @@
     <header>
         <div class="container">
             <a href="./" class="logo">COWLOGIN</a>
-            <nav>
+            <nav class="menu-btn">
                 <ul>
                     <li><a href="#">Giới thiệu</a></li>
                     <li class="dropdown">
@@ -36,7 +36,7 @@
                         <div class="dropbox">
                             <div class="drop-arrow"></div>
                             <ul class="drop-content">
-                                <li><a href="#">Phương pháp Pomodoro</a></li>
+                                <li><a href="#">Pomodoro</a></li>
                                 <li><a href="#">Ghi chú</a></li>
                                 <li><a href="#">To do list</a></li>
                                 <li><a href="#">Đặt câu hỏi</a></li>
@@ -56,8 +56,18 @@
                         </div>
                     </li>
                 </ul>
+                <div class="btn"><button class="button-login" onclick="window.location.href='login.html'">Đăng
+                        nhập</button>
+                    <div class="btn-dropbox">
+                        <div class="btn-droparrow"></div>
+                        <ul class="btn-dropcontent">
+                            <li><a href="./profile.html">Trang cá nhân</a></li>
+                            <li><a href="#" class="btn-logout">Đăng xuất</a></li>
+                        </ul>
+                    </div>
+                </div>
             </nav>
-            <button class="button-login" onclick="window.location.href='login.html'">Đăng nhập</button>
+
         </div>
     </header>
 
@@ -78,6 +88,7 @@
         </ul>
         <p class="hero-tag">@doan1_dhmt17a1hn_uneti</p>
     </main>
+    <script src="./script/index.js"></script>
 </body>
 
 </html>

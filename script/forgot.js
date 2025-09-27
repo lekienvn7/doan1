@@ -1,12 +1,7 @@
-const loginBtn =
-  document.getElementById(
-    "btn-login"
-  ); /* Lấy button của file forgot.html qua id */
-const completeText =
-  document.querySelector(
-    ".complete-text"
-  ); /* Lấy div chứa chữ thông báo bằng class complete-text */
+const loginBtn = document.getElementById("btn-login");
+const completeText = document.querySelector(".complete-text");
 
-loginBtn.addEventListener("click", () => {
+loginBtn.addEventListener("click", function (e) {
   completeText.classList.add("active");
+  e.preventDefault();
 });
