@@ -11,7 +11,7 @@ header {
 }
 header .container {
   max-width: 1500px;
-  margin: 0px auto;
+  margin: 0 auto;
   padding: 0 20px;
   display: flex;
   align-items: center;
@@ -47,10 +47,13 @@ header .container {
 
 header div nav ul {
   display: flex;
+  justify-content: space-between;
+  max-width: 100%;
   list-style: none;
   flex-wrap: nowrap;
   gap: 25px;
-  margin-left: 700px;
+  margin: 0;
+  padding: 0;
 }
 nav ul li a {
   text-decoration: none;
@@ -85,6 +88,7 @@ header nav ul li.dropdown {
 
   opacity: 0;
   pointer-events: none;
+  transform-origin: top;
   transition: transform 0.35s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.25s ease;
 }
 .drop-content {
@@ -177,11 +181,8 @@ form {
   text-align: center;
   gap: 25px;
 }
-.text-login .text-notice {
-  font-weight: lighter;
-}
 
-.label-email {
+.label-pass {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -190,7 +191,22 @@ form {
   font-weight: bold;
 }
 
-.label-email i {
+.label-pass i {
+  position: absolute;
+  top: 55%;
+  left: 20px;
+  color: #cb6ce6;
+}
+
+.re-pass {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  gap: 5px;
+  font-weight: bold;
+}
+.re-pass i {
   position: absolute;
   top: 55%;
   left: 20px;
@@ -213,7 +229,7 @@ input:focus {
   background-color: #fdf9ff;
 }
 
-.button-login2 {
+.button-repass {
   width: 400px;
   height: 50px;
   background-color: #545454;
@@ -228,17 +244,16 @@ input:focus {
 
   transition: transform 0.3s ease, background-color 0.2s ease;
 }
-.button-login2:hover {
+.button-repass:hover {
   transform: scale(1.05);
   background-color: #a64dc7;
 }
-.button-login2:active {
+.button-repass:active {
   transform: scale(0.95);
   background-color: #a64dc7;
 }
 
 .complete .complete-text {
-  color: #a64dc7;
   display: none;
   flex-direction: column;
   align-items: center;
@@ -246,27 +261,98 @@ input:focus {
 
   opacity: 0;
   pointer-events: none;
-  transform-origin: top;
+  transform-origin: top center;
   transform: scale(0.8);
-  transition: opacity 0.25s ease, transform 0.3s cubic-bezier(0.25, 1, 0.5, 1);
-}
-.complete-text.active {
-  display: flex;
-  pointer-events: auto;
-  opacity: 1;
-  transform: scale(1);
-  transition: color 0.2s ease;
+  transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), opacity 2s ease;
 }
 
-.complete .complete-text a {
+.complete-text a {
   text-decoration: none;
 
   transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), color 0.2s ease;
 }
+
+.complete-text.active {
+  opacity: 1;
+  display: flex;
+  pointer-events: auto;
+  transform: scale(1);
+  transition: color 0.2s ease;
+}
+
 .complete .complete-text a:hover {
   transform: scale(1.05);
 }
 .complete .complete-text a:active {
   color: #a64dc7;
   transform: scale(0.95);
+}
+
+.complete .not-samepass {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+
+  pointer-events: none;
+  opacity: 0;
+  transform-origin: top center;
+  transform: scale(0.8);
+  transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.2s ease;
+}
+.complete .not-samepass a {
+  color: #cb6ce6;
+  text-decoration: none;
+
+  transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), color 0.2s ease;
+}
+.complete .not-samepass a:hover {
+  transform: scale(1.05);
+}
+.complete .not-samepass a:active {
+  transform: scale(0.95);
+  color: #a64dc7;
+}
+.complete .not-samepass.active {
+  opacity: 1;
+  transform: scale(1);
+  display: flex;
+  pointer-events: auto;
+  transition: color 0.2 ease;
+}
+.complete .not-samepass.unactive {
+  display: none;
+}
+
+.complete .less-type {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+
+  opacity: 0;
+  transform-origin: top center;
+  transform: scale(0.8);
+  transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.2s ease;
+}
+.complete .less-type a {
+  color: #cb6ce6;
+  text-decoration: none;
+
+  transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), color 0.2s ease;
+}
+.complete .less-type.active {
+  opacity: 1;
+  transform: scale(1);
+  display: flex;
+  pointer-events: auto;
+  transition: color 0.2 ease;
+}
+
+.complete .less-type a:hover {
+  transform: scale(1.05);
+}
+.complete .less-type a:active {
+  transform: scale(0.95);
+  color: #a64dc7;
 }
