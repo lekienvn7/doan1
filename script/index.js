@@ -1,7 +1,9 @@
 if (localStorage.getItem("isLoggedIn") === "true") {
   const btn = document.querySelector(".button-login");
+  const menu = document.querySelector(".menu-btn");
   btn.innerHTML = '<i class="fa-regular fa-circle-user"></i>';
   btn.classList.add("logged-btn");
+  menu.classList.add("active");
   const divbtn = document.querySelector(".btn");
   divbtn.classList.add("logged-divbtn");
   btn.onclick = () => {

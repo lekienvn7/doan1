@@ -145,7 +145,7 @@ body {
   background: linear-gradient(to right, #e3fdf5, #ffe6fa);
 }
 
-.login-container {
+.forgot-container {
   display: flex;
   flex-direction: column;
   background-color: white;
@@ -154,6 +154,7 @@ body {
   max-width: 500px;
   margin: 50px auto;
   padding: 40px 50px;
+  opacity: 1;
   gap: 25px;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
@@ -171,13 +172,13 @@ form {
   gap: 25px;
 }
 
-.text-login {
+.text-forgot {
   display: flex;
   flex-direction: column;
   text-align: center;
   gap: 25px;
 }
-.text-login .text-notice {
+.text-forgot .text-notice {
   font-weight: lighter;
 }
 
@@ -217,20 +218,22 @@ input:focus {
   width: 400px;
   height: 50px;
   background-color: #545454;
-  color: white;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 30.7px;
-  font-weight: bold;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
   border-radius: 10px;
 
-  transition: transform 0.3s ease, background-color 0.2s ease;
+  color: white;
+  font-size: 30.7px;
+  font-weight: bold;
+
+  transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1),
+    background-color 0.2s ease;
 }
 .button-login2:hover {
   transform: scale(1.05);
-  background-color: #a64dc7;
+  background-color: #cb6ce6;
 }
 .button-login2:active {
   transform: scale(0.95);
@@ -269,4 +272,143 @@ input:focus {
 .complete .complete-text a:active {
   color: #a64dc7;
   transform: scale(0.95);
+}
+
+.repass-container {
+  display: none;
+  flex-direction: column;
+  background-color: white;
+  align-items: center;
+  justify-content: center;
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 40px 50px;
+  opacity: 0;
+  gap: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+
+  transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1),
+    opacity 0.35s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.text-repass {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 25px;
+}
+
+.text-repass .chaomung-repass {
+  color: #cb6ce6;
+}
+
+.label-pass {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  gap: 5px;
+  font-weight: bold;
+}
+.label-pass i {
+  position: absolute;
+  top: 55%;
+  left: 20px;
+  color: #cb6ce6;
+}
+
+.re-pass {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-weight: bold;
+}
+.re-pass i {
+  position: absolute;
+  top: 55%;
+  left: 20px;
+  color: #cb6ce6;
+}
+
+.button-repass {
+  width: 400px;
+  height: 50px;
+  background-color: #545454;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+
+  color: white;
+  font-size: 30.7px;
+  font-weight: bold;
+
+  transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1),
+    background-color 0.2s ease;
+}
+.button-repass:hover {
+  transform: scale(1.05);
+  background-color: #cb6ce6;
+}
+.button-repass:active {
+  transform: scale(0.95);
+  background-color: #a64dc7;
+}
+.notice-text {
+  display: none;
+  flex-direction: column;
+  text-align: center;
+  max-width: 400px;
+  color: #cb6ce6;
+  margin-top: 25px;
+
+  opacity: 0;
+  cursor: pointer;
+  transform-origin: top center;
+  transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.2s ease,
+    color 0.2s ease;
+}
+.notice-text.active {
+  display: flex;
+  opacity: 1;
+}
+.notice-text:hover {
+  transform: scale(1.05);
+  color: #a64dc7;
+}
+.notice-text:active {
+  transform: scale(0.95);
+  color: #cb6ce6;
+}
+
+.complete-repass .complete-text {
+  display: none;
+  flex-direction: column;
+  text-align: center;
+  text-decoration: none;
+  max-width: 400px;
+  color: #a64dc7;
+  margin-top: 25px;
+
+  opacity: 0;
+  cursor: pointer;
+  transform-origin: top center;
+  transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.2s ease,
+    color 0.2s ease;
+}
+.complete-repass .complete-text:hover {
+  transform: scale(1.05);
+  color: #cb6ce6;
+}
+.complete-repass .complete-text:active {
+  transform: scale(0.95);
+  color: #a64dc7;
+}
+.complete-repass .complete-text.active {
+  display: flex;
+  opacity: 1;
 }

@@ -34,7 +34,7 @@
                         <div class="dropbox">
                             <div class="drop-arrow"></div>
                             <ul class="drop-content">
-                                <li><a href="#">Phương pháp Pomodoro</a></li>
+                                <li><a href="#">Pomodoro</a></li>
                                 <li><a href="#">Ghi chú</a></li>
                                 <li><a href="#">To do list</a></li>
                                 <li><a href="#">Đặt câu hỏi</a></li>
@@ -60,15 +60,15 @@
 
 
     </header>
-    <div class="login-container">
-        <div class="text-login">
+    <div class="forgot-container">
+        <div class="text-forgot">
             <h2 class="chaomung">Bạn Quên Mật Khẩu?</h2>
             <h1>Nhập Email</h1>
             <p class="text-notice">Chúng tôi có thể gửi hướng dẫn đặt lại mật khẩu đến email liên kết với tài khoản
                 <span style="color:#a64dc7; font-weight: bold;">COWLOGIN</span> của bạn.
             </p>
         </div>
-        <form>
+        <form class="forgot">
             <div class="label-email">
                 <label for="email">Email</label>
                 <i class="fa-regular fa-envelope"></i>
@@ -76,11 +76,37 @@
             </div>
             <div class="complete"><button class="button-login2" id="btn-login" type="submit">COWLOGIN</button>
                 <div class="complete-text">
-                    <a href="./repass.html">Chúng tôi đã gửi tin nhắn đến email của bạn.</a>
+                    <a href="#">Chúng tôi đã gửi tin nhắn đến email của bạn.</a>
                 </div>
             </div>
         </form>
+    </div>
 
+    <div class="repass-container">
+        <form class="repass">
+            <div class="text-repass">
+                <h2 class="chaomung-repass">Đặt Lại Mật Khẩu Của Bạn</h2>
+                <p class="text-notice-repass">Hãy lựa chọn mật khẩu tối thiểu 8 ký tự để bảo vệ tài khoản
+                    <span style="color:#a64dc7; font-weight: bold;">COWLOGIN</span> của bạn.
+                </p>
+            </div>
+            <div class="label-pass">
+                <label for="password">Mật khẩu mới</label>
+                <i class="fa-solid fa-lock"></i>
+                <input type="password" id="password" placeholder="Nhập mật khẩu mới" required>
+            </div>
+            <div class="re-pass">
+                <label for="re-pass">Nhập lại mật khẩu</label>
+                <i class="fa-solid fa-lock"></i>
+                <input type="password" name="repass" id="repass" placeholder="Nhập lại mật khẩu">
+            </div>
+
+            <div class="complete-repass"><button class="button-repass" id="btn-repass" type="submit">COWLOGIN</button>
+                <a href="./login.html" class="complete-text">Tạo mật khẩu thành công. Nhấn để về trang Đăng Nhập.</a>
+            </div>
+            <p class="notice-text"></p>
+    </div>
+    </form>
     </div>
     <script src="./script/forgot.js"></script>
 </body>

@@ -44,6 +44,9 @@ header .container {
   align-items: center;
   gap: 25px;
 }
+.menu-btn.active {
+  gap: 1px;
+}
 
 header div nav ul {
   display: flex;
