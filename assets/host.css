@@ -344,3 +344,77 @@ main {
   border: 2px solid #cb6ce6;
   background-color: #fdf9ff;
 }
+
+.find-teacher {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+.find-teacher input {
+  padding: 10px;
+  width: 150px;
+  height: 30px;
+  border: 2px solid black;
+  border-radius: 8px;
+
+  transition: color 0.2s ease;
+}
+.find-teacher input:focus {
+  outline: none;
+  border: 2px solid #cb6ce6;
+  background-color: #fdf9ff;
+}
+
+.find-room {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+.find-room select {
+  padding: 5px;
+  width: 150px;
+  height: 30px;
+  font-size: 14px;
+  border: 2px solid black;
+  border-radius: 8px;
+
+  transition: color 0.2s ease;
+}
+.find-room select:focus {
+  outline: none;
+  border: 2px solid #cb6ce6;
+  background-color: #fdf9ff;
+}
+option {
+  background-color: #fdf9ff;
+  color: black;
+}
+
+.find-reset {
+  display: flex;
+  flex-direction: column;
+  padding: 5px 10px;
+  margin-left: 6px;
+  width: 100px;
+  height: 30px;
+  border-radius: 8px;
+  border: 2px solid black;
+  background-color: #fdf9ff;
+  color: #a64dc7;
+  font-weight: bold;
+
+  transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), color 0.2s ease,
+    background-color 0.2s ease;
+}
+.find-reset:hover {
+  transform: scale(1.05);
+  color: white;
+  background-color: #cb6ce6;
+}
+.find-reset:active {
+  transform: scale(0.95);
+  background-color: #a64dc7;
+  color: white;
+}

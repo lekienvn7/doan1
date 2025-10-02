@@ -83,12 +83,24 @@
                     <div class="find-main">
                         <div class="find-id">
                             <label for="idfind">Id: </label>
-                            <input type="text" id="idfind" placeholder="Nhập id">
-                        </div class="find-id">
+                            <input type="number" id="idfind" placeholder="Nhập id">
+                        </div>
                         <div class="find-sub">
                             <label for="idfind">Môn: </label>
                             <input type="text" id="subfind" placeholder="Nhập môn học">
-                        </div class="find-id">
+                        </div>
+                        <div class="find-teacher">
+                            <label for="teacherfind">Giáo viên: </label>
+                            <input type="text" id="teacherfind" placeholder="Nhập tên giáo viên">
+                        </div>
+                        <div class="find-room">
+                            <label for="roomfind">Phòng học: </label>
+                            <select name="roomfind" id="roomfind">
+                                <option value="Online">Online</option>
+                                <option value="Offline">Offline</option>
+                            </select>
+                        </div>
+                        <button class="find-reset">Đặt lại</button>
                     </div>
                 </header>
                 <hr style="margin: 20px 0px;" />
@@ -96,6 +108,7 @@
             </div>
         </div>
     </main>
+    <script src="./script/host.js"></script>
 </body>
 
 </html>
