@@ -5,23 +5,27 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
+body {
+  background: linear-gradient(to right, #e3fdf5, #ffe6fa);
+}
+
 header {
   background-color: white;
   color: black;
 }
 header .container {
   max-width: 1500px;
-  margin: 10px auto;
+  margin: 0px auto;
   padding: 0 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 40px;
+  height: 60px;
 }
 
 .logo {
   color: #333;
-  font-size: 30.7px;
+  font-size: 22px;
   text-decoration: none;
   font-weight: bold;
   cursor: pointer;
@@ -37,6 +41,21 @@ header .container {
 .logo:active {
   transform: scale(0.95);
   color: #333;
+}
+
+.find-box input {
+  padding: 3px 10px;
+  width: 250px;
+  height: 25px;
+  border: 2px solid black;
+  border-radius: 8px;
+
+  transition: border 0.25s ease, background-color 0.25s ease;
+}
+.find-box input:focus {
+  outline: none;
+  border: 2px solid #cb6ce6;
+  background-color: #fdf9ff;
 }
 
 .menu-btn {
@@ -235,16 +254,15 @@ main {
 }
 
 .menu-bar {
-  display: block;
+  display: fixed;
+  position: fixed;
   left: 0;
   width: 220px;
-  padding: 10px 10px;
-  margin-top: 20px;
-  height: 100%;
+  padding: 30px 10px;
+  height: 100vh;
   flex-direction: column;
   background-color: white;
   color: #737373;
-  border-right: 3px solid #cb6ce6;
 }
 
 .menu-bar p {
@@ -274,147 +292,83 @@ main {
   color: #cb6ce6;
 }
 
-.main {
-  margin: 20px 50px;
+.main-class {
+  margin: 20px 20px;
+  margin-left: 250px;
+  padding: 20px 20px;
+  background-color: white;
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
 }
-.math .math-title {
+
+.basic-title {
   font-size: 30px;
-}
-
-.math .find {
-  margin: 20px 0;
-  gap: 25px;
-  display: flex;
-  flex-direction: column;
-}
-.math p {
-  font-size: 20px;
   font-weight: bold;
 }
 
-.find-main {
+.classbasic {
   display: flex;
   flex-direction: row;
-  align-items: center;
-  gap: 30px;
+  margin-top: 20px;
+  max-width: 1170px;
+  height: 200px;
+  gap: 0px;
+
+  overflow-y: hidden;
+  overflow-x: auto;
+}
+.basic {
+  position: relative;
 }
 
-.find-id {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 20px;
-}
-.find-id input {
-  padding: 10px;
-  width: 150px;
-  height: 30px;
-  border: 2px solid black;
-  border-radius: 8px;
-
-  transition: color 0.2s ease;
-}
-.find-id input:focus {
-  outline: none;
-  border: 2px solid #cb6ce6;
-  background-color: #fdf9ff;
+.classbasic::-webkit-scrollbar {
+  opacity: 0;
 }
 
-.find-sub {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 20px;
+.scroll-btn {
+  position: absolute;
+  top: 60%;
+  transform: translateY(-50%);
+  font-size: 30px;
+  color: #737373;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
 }
-.find-sub input {
-  padding: 10px;
-  width: 150px;
-  height: 30px;
-  border: 2px solid black;
-  border-radius: 8px;
-
-  transition: color 0.2s ease;
-}
-.find-sub input:focus {
-  outline: none;
-  border: 2px solid #cb6ce6;
-  background-color: #fdf9ff;
-}
-
-.find-teacher {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 20px;
-}
-.find-teacher input {
-  padding: 10px;
-  width: 150px;
-  height: 30px;
-  border: 2px solid black;
-  border-radius: 8px;
-
-  transition: color 0.2s ease;
-}
-.find-teacher input:focus {
-  outline: none;
-  border: 2px solid #cb6ce6;
-  background-color: #fdf9ff;
-}
-
-.find-room {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 20px;
-}
-.find-room select {
-  padding: 5px;
-  width: 150px;
-  height: 30px;
-  font-size: 14px;
-  border: 2px solid black;
-  border-radius: 8px;
-
-  transition: color 0.2s ease;
-}
-.find-room select:focus {
-  outline: none;
-  border: 2px solid #cb6ce6;
-  background-color: #fdf9ff;
-}
-option {
-  background-color: #fdf9ff;
-  color: black;
-}
-
-.find-reset {
-  display: flex;
-  flex-direction: column;
-  padding: 5px 10px;
-  margin-left: 6px;
-  width: 100px;
-  height: 30px;
-  border-radius: 8px;
-  border: 2px solid black;
-  background-color: #fdf9ff;
+.scroll-btn:active {
   color: #a64dc7;
-  font-weight: bold;
+}
 
-  transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), color 0.2s ease,
-    background-color 0.2s ease;
+.scroll-btn.left {
+  left: 10px;
 }
-.find-reset:hover {
-  transform: scale(1.05);
-  color: white;
-  background-color: #cb6ce6;
+.scroll-btn.right {
+  right: 10px;
 }
-.find-reset:active {
-  transform: scale(0.95);
-  background-color: #a64dc7;
-  color: white;
+
+.basic1 {
+  display: block;
+  width: 300px;
+  height: 180px;
+  margin: auto 20px;
+  padding: 10px 10px;
+  border: 3px solid black;
+  border-radius: 8px;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.basic1 p {
+  font-weight: bold;
+}
+
+.mainbasic {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+.mainbasic ul {
+  list-style: none;
 }
